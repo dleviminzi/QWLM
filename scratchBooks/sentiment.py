@@ -8,6 +8,9 @@ Basic sentiment analysis
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import numpy as np
 
+'''
+Must change file to whatever your path is. Isn't sure how to integrate with git? I just cloned the repo to my desktop...
+'''
 data = np.genfromtxt(r'C:\Users\Dory\Documents\GitHub\breakTheBank\data\pooled.csv', delimiter = ',', dtype= None)
 
 #print(type(data))
