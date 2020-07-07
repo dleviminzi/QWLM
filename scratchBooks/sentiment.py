@@ -17,6 +17,10 @@ data = np.genfromtxt(r'C:\Users\Dory\Documents\GitHub\breakTheBank\data\pooled.c
 sentences = []
 stocks = []
 
+'''
+Get sentences and stock symbols from pooled.csv
+'''
+
 for i in range(0, len(data)):
     sentences.append(str(data[i][6]))
     stocks.append(data[i][2])    
@@ -27,7 +31,16 @@ analyzer = SentimentIntensityAnalyzer()
 count = 0
 my_tups = []
 
+'''
+Run Vader sentiment analysis on each sentence.
+Create list of tuples matching stock ticker to "compound" sentiment score
+
+positive sentiment: compound score >= 0.05
+neutral sentiment: (compound score > -0.05) and (compound score < 0.05)
+negative sentiment: compound score <= -0.05
+'''
 for sentence in sentences:
+
     vs = analyzer.polarity_scores(sentence)
     one, two, three, four = vs.items()
     txt, num = four
@@ -40,6 +53,6 @@ for sentence in sentences:
     
     count += 1
 
-print(stocks)
+#print(stocks)
 print(my_tups)
 print('\n')
