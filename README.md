@@ -1,4 +1,7 @@
-# Robinhood Day Trading (w/ sentiment analysis)
+# QWLM = quick way to lose money
+
+Automated robinhood Day Trading (w/ sentiment analysis)
+I would not use this to trade with real money. So... you probably should not use this to trade with real money.
 
 <pre>
 structure:
